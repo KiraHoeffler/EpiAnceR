@@ -1,7 +1,7 @@
 # EpiAnceR
 A method to adjust for genetic ancestry in DNA methylation studies (run on Illumina arrays) when genotyping data is not available.
 
-Ancestry_PCs:
+Ancestry_PCs (can be applied to new datasets run on Illumina 450K, EPIC, EPICv2 arrays):
 - Ancestry_functions: ancestry_info() extracts the ancestry information from the DNA methylation dataset and ancestry_PCA() uses that information to calculate ancestry PCs
 - SNP_cgs files contain CpGs that overlap with SNPs (0bp distance) at MAF < 0.05 for the different arrays
 
