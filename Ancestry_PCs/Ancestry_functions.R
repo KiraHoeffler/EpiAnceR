@@ -66,6 +66,9 @@ ancestry_info <- function(background_corr_RGset, samplesheet, array_type, path_S
   })
   
   # SAMPLESHEET
+  if (length(class(samplesheet)) > 1){
+    stop("Check that the samplesheet object is a data.frame. Only one class allowed")
+  }
   if (class(samplesheet) != "data.frame"){
     stop("Check that the samplesheet object is a data.frame.")
   }
