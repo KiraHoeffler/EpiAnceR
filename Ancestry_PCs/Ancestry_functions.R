@@ -4,7 +4,7 @@
 ################################################################################
 
 # Author: Kira Hoeffler
-# Part 1) Function to extract ancestry information (required resources are made available in Resources folder)
+# Part 1) Function to extract ancestry information (required resources are made available)
 # Part 2) Function to run PCA from ancestry information
 
 
