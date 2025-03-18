@@ -8,9 +8,9 @@ Ancestry_PCs:
 Manuscript:
 - Ancestry_pipeline: pipeline used for the analyses and tests in the manuscript
 - Resources - contains all files needed to run the ancestry PC calculation & follow-up analyses
-        -SNP_cgs: CpGs that overlap with SNPs (0bp distance) at MAF < 0.05 for the different arrays -> needed for the ancestry calculations
-        -General_functions: contains functions that are used for the ancestry PC calculations and analyses in the manuscript
-        -theme: ggplot2 themes used to generate figures for the manuscript
+        - SNP_cgs: CpGs that overlap with SNPs (0bp distance) at MAF < 0.05 for the different arrays -> needed for the ancestry calculations
+        - General_functions: contains functions that are used for the ancestry PC calculations and analyses in the manuscript
+        - theme: ggplot2 themes used to generate figures for the manuscript
 
 
 Contact:
