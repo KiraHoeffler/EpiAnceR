@@ -27,14 +27,13 @@
 #' residualised to correct for technical and biological factors
 #' combined with called genotypes from rs probes
 #'
-#' @param background_corr_RGset background-corrected RGset (using bgcorrect.illumina(RGset))
-#' @param samplesheet containing samples that survived the QC; df; samples as rows, variables as columns; needs to have columns: 
+#' @param background_corr_RGset: background-corrected RGset (using bgcorrect.illumina(RGset))
+#' @param samplesheet: data frame; containing samples that survived the QC; samples as rows, variables as columns; needs to have the following columns: 
 #' Basename (=sample name also used in the RGset), Sex, Age, and columns with the cell type proportions
-#' @param array_type "450K" OR "EPICv1" OR "EPICv2"
-#' @param path_SNP_folder path to directory that contains the provided files: "SNP_cgs_EPICv2.RData", "SNP_cgs_EPICv1.RData", "SNP_cgs_450K.RData"
-#' @param cell_cols column names of cell type proportions in the samplesheet
-#' e.g. for saliva: c("Epi", "Fib", "comb_ICs")
-#' @param dp if you have a df/matrix with detection p values already calculated, it can speed up the process, if not it takes longer to run
+#' @param array_type: "string"; "450K" OR "EPICv1" OR "EPICv2"
+#' @param path_SNP_folder: path ("string") to directory that contains the provided files: "SNP_cgs_EPICv2.RData", "SNP_cgs_EPICv1.RData", "SNP_cgs_450K.RData"
+#' @param cell_cols: vector; column names of cell type proportions in the samplesheet, e.g. for saliva: c("Epi", "Fib", "comb_ICs")
+#' @param dp: if you have a data frame or matrix with detection p values already calculated, it can speed up the process, if not it takes longer to run
 #'
 #' @return df with ancestry information that can be used to calculate PCs on
 #' 
@@ -568,17 +567,16 @@ ancestry_info <- function(background_corr_RGset, samplesheet, array_type, path_S
 
 #' RUN ANCESTRY PCA
 #'
-#' @param SNP_info output of ancestry_info function
-#' df; cpgs/snps as rows, sample names as columns:
+#' @param SNP_info: output of the ancestry_info() function; data frame; cpgs/snps as rows, sample names as columns:
 #' structure example:
 #'                123456789_R01C01    123456789_R02C01    123456789_R03C01
 #'  cg03105556          0.02389115          0.01232904          0.03520888
 #'  cg06248701         -0.03864776         -0.03530882         -0.09446918
 #'  cg09122588          0.05765300          0.13806254          0.10284979
 #' 
-#' @param samplesheet samplesheet containing the samples for which ancestry PCs will be calculated;
-#' df; rows as samples, variables as columns; needs to contain the column Basename that must overlap with
-#' the column names of the SNP_info df
+#' @param samplesheet: data frame; samplesheet containing the samples for which ancestry PCs will be calculated;
+#' rows as samples, variables as columns; needs to contain the column "Basename" that must overlap with
+#' the column names of the SNP_info data frame
 #'
 #' @return PCA_result; df; samples as rows, PCs as columns
 #' example structure:
